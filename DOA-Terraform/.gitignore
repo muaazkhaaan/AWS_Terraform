@@ -17,5 +17,5 @@ override.tf.json
 # Sensitive files
 *.tfvars
 
-# Ignore .terraform.lock.hcl if you don’t want to commit dependency locks
+# Ignore .terraform.lock.hcl 
 .terraform.lock.hcl
