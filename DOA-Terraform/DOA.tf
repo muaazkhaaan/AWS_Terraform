@@ -13,7 +13,7 @@ provider "aws" {
 }
 
 resource "aws_vpc" "this" {
-    cidr_block = "10.10.0.0/20"
+    cidr_block = var.vpc_cidr
     enable_dns_hostnames = false
     enable_dns_support = true
 
@@ -46,4 +46,10 @@ resource "aws_subnet" "public_2" {
     managed-by = "Terraform",
     deployed-by = "Muaaz"
     }
+}
+
+variable "vpc_cidr" {
+    type = string
+    default = "10.10.0.0/20"
+    description = "CIDR block for the VPC"
 }
